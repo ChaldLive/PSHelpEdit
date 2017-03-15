@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89824ED9-D571-4384-BC15-86C61FFAF26F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSHelpEdit</RootNamespace>
+    <AssemblyName>PSHelpEdit</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>C:\Facilia\Klienter\FaciliaPS\FaciliaPSE\FaciliaPSE\ApiBinFiles\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>C:\Facilia\Klienter\FaciliaPS\FaciliaPSE\FaciliaPSE\ApiBinFiles\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions">
+      <HintPath>C:\Facilia\Klienter\FaciliaPS\FaciliaPSE\FaciliaPSE\ApiBinFiles\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayCommandGeneric.cs" />
+    <Compile Include="ControlExtenders\ExpanderEx\ExpanderEx.cs" />
+    <Compile Include="ControlExtenders\ListBoxEx\ListBoxEx.cs" />
+    <Compile Include="ControlExtenders\ListboxItemEx\ListboxItemEx.cs" />
+    <Compile Include="ControlExtenders\ListBoxItemParam\ListBoxItemParam.cs" />
+    <Compile Include="ControlExtenders\ListBoxParam\ListBoxParam.cs" />
+    <Compile Include="ControlExtenders\ListViewEx\ListViewEx.cs" />
+    <Compile Include="ControlExtenders\ListViewItemEx\ListViewItemEx.cs" />
+    <Compile Include="ControlExtenders\ToolBarButton\ToolBarButton.cs" />
+    <Compile Include="Controls\CommandDetailsModel.cs" />
+    <Compile Include="Controls\CommandsCtrl.xaml.cs">
+      <DependentUpon>CommandsCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommandsModel.cs" />
+    <Compile Include="Controls\ParametersModel.cs" />
+    <Compile Include="Defines\XDocumentHelpers.cs" />
+    <Compile Include="Dlg\CommandSaveDlg\CmdItemShadow.cs" />
+    <Compile Include="Dlg\CommandSaveDlg\CmdSaveModel.cs" />
+    <Compile Include="Dlg\CommandSaveDlg\CmdSaveWnd.xaml.cs">
+      <DependentUpon>CmdSaveWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\EventsAndDelegates.cs" />
+    <Compile Include="General\ModelEventArg.cs" />
+    <Compile Include="Interfaces\MruHandlerEventArg.cs" />
+    <Compile Include="Interfaces\IHelpItemAttribute.cs" />
+    <Compile Include="MainWindowModel.cs" />
+    <Compile Include="Models\HelpItemAttribute.cs" />
+    <Compile Include="Models\HelpItemFactory.cs" />
+    <Compile Include="Models\HelpItems\HelpItemEqualityComparer.cs" />
+    <Compile Include="Models\HelpItems\ParameterShadowItem.cs" />
+    <Compile Include="Models\ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ResourceKeys\DlgResourceKeys.cs" />
+    <Compile Include="ResourceKeys\GridSplitterResourceKeys.cs" />
+    <Compile Include="ResourceKeys\ListboxItemResourcekeys.cs" />
+    <Compile Include="ResourceKeys\ListViewResourceKeys.cs" />
+    <Compile Include="ResourceKeys\ResourceKeys.cs" />
+    <Compile Include="ResourceKeys\ToolBarButtonResourceKeys.cs" />
+    <Compile Include="Utils\MruHandler.cs" />
+    <Compile Include="Utils\MruItem.cs" />
+    <Compile Include="Utils\ParamUtil.cs" />
+    <Compile Include="Utils\Reflections.cs" />
+    <Compile Include="Utils\TypeInfoUtil.cs" />
+    <Compile Include="Utils\XSerializer.cs" />
+    <Page Include="Controls\CommandsCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dlg\CommandSaveDlg\CmdSaveWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Attributes\XmlTagTypeAttribute.cs" />
+    <Compile Include="Defines\Defines.cs" />
+    <Compile Include="Interfaces\IHelpItem.cs" />
+    <Compile Include="Interfaces\IXSerialise.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\ListViewExTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ToolBarButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\DefaultSkin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ListBoxParamTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ListboxTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HelpItems\AlertItem.cs" />
+    <Compile Include="Models\HelpItems\AlertSetItem.cs" />
+    <Compile Include="Models\HelpItems\CodeItem.cs" />
+    <Compile Include="Models\HelpItems\CommandItem.cs" />
+    <Compile Include="Models\HelpItems\CommandLineItem.cs" />
+    <Compile Include="Models\HelpItems\CommandLinesItem.cs" />
+    <Compile Include="Models\HelpItems\CommandRootItem.cs" />
+    <Compile Include="Models\HelpItems\CommandTextItem.cs" />
+    <Compile Include="Models\HelpItems\CopyrightItem.cs" />
+    <Compile Include="Models\HelpItems\DefaultValueItem.cs" />
+    <Compile Include="Models\HelpItems\Description.cs" />
+    <Compile Include="Models\HelpItems\Details.cs" />
+    <Compile Include="Models\HelpItems\Example.cs" />
+    <Compile Include="Models\HelpItems\Examples.cs" />
+    <Compile Include="Models\HelpItems\HelpItemBase.cs" />
+    <Compile Include="Models\HelpItems\HelpItems.cs" />
+    <Compile Include="Models\HelpItems\InputTypeItem.cs" />
+    <Compile Include="Models\HelpItems\InputTypesItem.cs" />
+    <Compile Include="Models\HelpItems\IntroductionItem.cs" />
+    <Compile Include="Models\HelpItems\LinkTextItem.cs" />
+    <Compile Include="Models\HelpItems\Name.cs" />
+    <Compile Include="Models\HelpItems\NavigationLinkItem.cs" />
+    <Compile Include="Models\HelpItems\NonTerminatingErrorsItem.cs" />
+    <Compile Include="Models\HelpItems\NounItem.cs" />
+    <Compile Include="Models\HelpItems\Para.cs" />
+    <Compile Include="Models\HelpItems\Parameter.cs" />
+    <Compile Include="Models\HelpItems\Parameters.cs" />
+    <Compile Include="Models\HelpItems\ParameterValueGroupItem.cs" />
+    <Compile Include="Models\HelpItems\ParameterValueItem.cs" />
+    <Compile Include="Models\HelpItems\RelatedLinksItem.cs" />
+    <Compile Include="Models\HelpItems\ReturnValueItem.cs" />
+    <Compile Include="Models\HelpItems\ReturnValuesItem.cs" />
+    <Compile Include="Models\HelpItems\SyntaxItem.cs" />
+    <Compile Include="Models\HelpItems\SyntaxItems.cs" />
+    <Compile Include="Models\HelpItems\terminatingErrorsItem.cs" />
+    <Compile Include="Models\HelpItems\TitleItem.cs" />
+    <Compile Include="Models\HelpItems\TypeItem.cs" />
+    <Compile Include="Models\HelpItems\UriItem.cs" />
+    <Compile Include="Models\HelpItems\VerbItem.cs" />
+    <Compile Include="Models\HelpItems\VersionItem.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\TreeItemModel.cs" />
+    <Compile Include="Models\XSerialise.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DownArrow_32.png" />
+    <Resource Include="Resources\LeftArrow_32.png" />
+    <Resource Include="Resources\RightArrow_32.png" />
+    <Resource Include="Resources\UpArrow_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Archive_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Check_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Copy v2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Copy_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cut_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_LeftArrowLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_LeftArrowSmalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_RightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_RightArrowLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_RightArrowSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_TrashCanLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_TrashCanSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_UpArrowLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ico_UpArrowSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\IcoDownArrowLarge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestMruFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

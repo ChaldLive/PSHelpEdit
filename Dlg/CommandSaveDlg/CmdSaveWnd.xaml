@@ -1,0 +1,73 @@
+﻿<Window x:Class="PSHelpEdit.Dlg.CommandSaveDlg.CmdSaveWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSHelpEdit.Dlg.CommandSaveDlg"
+        WindowStyle="ThreeDBorderWindow"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="" 
+        Height="200" 
+        Width="400">
+    <Border Background="{ DynamicResource {x:Static SystemColors.ControlBrushKey}}" >
+        <Grid Background="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="49"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="PART_DlgHeader" 
+                       Grid.Row="0"
+                       Text="{Binding Path=HeaderInfo}" 
+                       Foreground="Navy"
+                       FontFamily="Segoe UI" 
+                       FontSize="16" 
+                       FontWeight="Bold"
+                       VerticalAlignment="Top"
+                       Margin="12,12,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,12,0">
+                <Button Width="42" Height="22" Content="Save" Click="ButtonSaveClick" />
+                <Button Width="42" Height="22" Content="Cancel" Margin="4,0,0,0" IsCancel="True"/>
+            </StackPanel>
+            <Grid Grid.Row="1" Background="White">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0" >
+                        <TextBlock Text="Current name:" 
+                               FontFamily="Segoe UI"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center" 
+                               Margin="12,0,0,0"/>
+                        <TextBlock Text="{Binding Path=OldCommandName}" 
+                               FontFamily="Segoe UI"
+                               FontSize="12"
+                               FontWeight="Regular"
+                               VerticalAlignment="Center" 
+                               Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0" >
+                        <TextBlock Text="New name:" 
+                               FontFamily="Segoe UI"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center" 
+                               Margin="12,0,0,0"/>
+
+                        <TextBlock Text="{Binding Path=NewCommandName}" 
+                                   FontFamily="Segoe UI"
+                                   FontSize="12"
+                                   FontWeight="Regular"
+                                   VerticalAlignment="Center" 
+                                   Margin="5,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="#49FFFFFF" VerticalAlignment="Bottom" BorderThickness="0,0,2,2" Grid.Row="1"/>
+                <Border BorderBrush="#49000000" VerticalAlignment="Bottom" BorderThickness="2,2,0,0" Grid.Row="1"/>
+
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

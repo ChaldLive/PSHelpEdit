@@ -1,0 +1,272 @@
+﻿<UserControl x:Class="PSHelpEdit.Controls.CommandsCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ctls="clr-namespace:PSHelpEdit.Controls"
+             xmlns:mdls="clr-namespace:PSHelpEdit.Models"
+             xmlns:ext="clr-namespace:PSHelpEdit.ControlExtenders"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             mc:Ignorable="d" 
+             xmlns:keys="clr-namespace:PSHelpEdit.Keys"
+             d:DesignHeight="600" 
+             d:DesignWidth="800">
+    <UserControl.InputBindings>
+        <!--<KeyBinding Key="F2" Command="{Binding CmdItemEdit}" />
+        <KeyBinding Key="Esc" Command="{Binding CmdEscapeKey}" />
+        <KeyBinding Key="Return" Command="{Binding CmdReturnKey}" />-->
+    </UserControl.InputBindings>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ext:ListBoxEx ItemsSource="{Binding Path=Root.Children}" SelectedItem="{Binding Path=SelectedCommandItem}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type mdls:CommandItem}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="PART_HeadText" 
+                                   Grid.Column="1" 
+                                   Text="{Binding Path=NameValue}" 
+                                   FontFamily="Segoe UI" 
+                                   FontSize="12" 
+                                   FontWeight="Normal"
+                                   TextWrapping="Wrap">
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Edit current item" Command="{Binding CmdItemEdit }"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ext:ListBoxEx>
+        <!--
+        -->
+        <GridSplitter  Width="5" 
+                       Grid.Column="1" 
+                       VerticalAlignment="Stretch" 
+                       HorizontalAlignment="Left" 
+                       Background="{DynamicResource {x:Static keys:ResourceKeys.GridSplitterBackgroundBrushKey}}"/>
+        <Grid Grid.Column="1">
+            <TabControl Margin="6,0,0,0" >
+                <!---->
+                <TabItem Header="Command details" DataContext="{Binding Path=CmdDetails}">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <WrapPanel Orientation="Vertical" 
+                                   HorizontalAlignment="Stretch" 
+                                   VerticalAlignment="Stretch">
+                            <Expander Header="Detailed Description" 
+                                      MaxWidth="800" 
+                                      MaxHeight="600" 
+                                      VerticalAlignment="Top" 
+                                      Margin="7,7,0,0" 
+                                      IsExpanded="True">
+                                <TextBox Text="{Binding Path=DescriptionValue}" 
+                                         TextWrapping="WrapWithOverflow"
+                                         FontFamily="Segoe UI" 
+                                         FontSize="12" 
+                                         FontWeight="Regular" 
+                                         HorizontalAlignment="Stretch" 
+                                         VerticalAlignment="Stretch"
+                                         VerticalScrollBarVisibility="Auto"
+                                         AcceptsReturn="True"/>
+                            </Expander>
+
+                            <Expander Header="Elaborate command description" 
+                                      MaxWidth="800" 
+                                      MaxHeight="600" 
+                                      VerticalAlignment="Top" 
+                                      Margin="7,7,0,0" 
+                                      IsExpanded="True">
+                                <TextBox Text="{Binding Path=CommandDescriptionValue}"
+                                         FontFamily="Segoe UI" 
+                                         TextWrapping="WrapWithOverflow"
+                                         FontSize="12" 
+                                         FontWeight="Regular" 
+                                         HorizontalAlignment="Stretch" 
+                                         VerticalAlignment="Stretch"
+                                         VerticalScrollBarVisibility="Auto"
+                                         AcceptsReturn="True"/>
+                            </Expander>
+                            <Expander Header="Detailed Version" 
+                                      MaxWidth="800" 
+                                      MaxHeight="600" 
+                                      VerticalAlignment="Top" 
+                                      Margin="7,7,0,0" 
+                                      IsExpanded="True">
+                                <TextBox Text="{Binding Path=VersionValue}"
+                                         FontFamily="Segoe UI" 
+                                         TextWrapping="WrapWithOverflow"
+                                         FontSize="12" 
+                                         FontWeight="Regular" 
+                                         HorizontalAlignment="Stretch" 
+                                         VerticalAlignment="Stretch"
+                                         VerticalScrollBarVisibility="Auto"
+                                         AcceptsReturn="True"/>
+                            </Expander>
+                            <Expander Header="Detailed Copyright" 
+                                      MaxWidth="800" 
+                                      MaxHeight="600" 
+                                      VerticalAlignment="Top" 
+                                      Margin="7,7,0,0" 
+                                      IsExpanded="True">
+                                <TextBox FontFamily="Segoe UI" 
+                                         Text="{Binding Path=CopyrightValue}"
+                                         TextWrapping="WrapWithOverflow"
+                                         FontSize="12" 
+                                         FontWeight="Regular" 
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Stretch" 
+                                         VerticalScrollBarVisibility="Auto"
+                                         AcceptsReturn="True"/>
+                            </Expander>
+                            
+                        </WrapPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <!---->
+                <TabItem Header="Parameters" DataContext="{Binding Path=ParametersModel}">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/> 
+                            </Grid.RowDefinitions>
+                            <GroupBox Grid.Row="0" Header="Syntax Item parameters">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="22"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <ToolBar Grid.Row="0">
+                                        <ext:ToolBarButton Header="Edit Param" 
+                                                           ImageSource="/PSHelpEdit;component/Resources/Edit_16x16.png" Margin="0,0,3,0" 
+                                                           Command="{Binding CmdEditSyntaxParam}"/>
+                                        <ext:ToolBarButton Header="Add" ImageSource="/PSHelpEdit;component/Resources/Add_16x16.png" Margin="0,0,3,0" />
+                                        <ext:ToolBarButton Header="Delete" ImageSource="/PSHelpEdit;component/Resources/Delete_16x16.png" Margin="0,0,3,0"/>
+                                    </ToolBar>
+                                    <ext:ListViewEx Grid.Row="1" 
+                                              ItemsSource="{Binding Path=SyntaxParams}" 
+                                              SelectedItem="{Binding Path=SelectedSyntaxParam}"
+                                              Margin="7,7,7,7">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=NameValue}" />
+                                                <GridViewColumn Header="Required">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <CheckBox IsChecked="{Binding Path=Required}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="VariableLenght" >
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel>
+                                                                <CheckBox IsChecked="{Binding Path=VariableLenght}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Globbing">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel>
+                                                                <CheckBox IsChecked="{Binding Path=Globbing}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="PipelineInput">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel>
+                                                                <CheckBox IsChecked="{Binding Path=PipelineInput}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Possition" DisplayMemberBinding="{Binding Path=Possition}"/>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ext:ListViewEx>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Grid.Row="1" Header="Command Item parameters">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="22"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <ToolBar Grid.Row="0">
+                                        <ext:ToolBarButton Header="Edit Param" ImageSource="/PSHelpEdit;component/Resources/Edit_16x16.png" Margin="0,0,3,0" />
+                                        <ext:ToolBarButton Header="Add" ImageSource="/PSHelpEdit;component/Resources/Add_16x16.png" Margin="0,0,3,0" />
+                                        <ext:ToolBarButton Header="Delete" ImageSource="/PSHelpEdit;component/Resources/Delete_16x16.png" Margin="0,0,3,0"/>
+                                    </ToolBar>
+                                    <ext:ListViewEx Grid.Row="1" 
+                                              ItemsSource="{Binding Path=ParameterItems}" 
+                                              SelectedItem="{Binding Path=SelectedParam}"
+                                              Margin="7,7,7,7">
+                                        <ext:ListViewEx.View>
+                                            <GridView>
+                                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=NameValue}" />
+                                                <GridViewColumn Header="Required">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <CheckBox IsChecked="{Binding Path=Required}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="VariableLenght" >
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel>
+                                                                <CheckBox IsChecked="{Binding Path=VariableLenght}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Globbing">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel>
+                                                                <CheckBox IsChecked="{Binding Path=Globbing}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="PipelineInput">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel>
+                                                                <CheckBox IsChecked="{Binding Path=PipelineInput}" />
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Possition" DisplayMemberBinding="{Binding Path=Possition}"/>
+                                            </GridView>
+                                        </ext:ListViewEx.View>
+                                    </ext:ListViewEx>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MruItems>
+  <MruItem>
+    <Name>FaciliaPS.dll-help.xml</Name>
+    <Title>FaciliaPS help file</Title>
+    <Description></Description>
+    <FileName></FileName>
+    <SourceDir>C:\Facilia\Klienter\FaciliaPS\FaciliaPS\Help\</SourceDir>
+    <CreatedDateTime>2017-01-01T00:00:00.0000000</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>Microsoft.Web.Deployment.PowerShell.dll-Help.xml</Name>
+    <Title>FaciliaPS help file</Title>
+    <Description></Description>
+    <FileName>Microsoft.Web.Deployment.PowerShell.dll-Help.xml</FileName>
+    <SourceDir>C:\Program Files\IIS\Microsoft Web Deploy V3\</SourceDir>
+    <CreatedDateTime>2017-01-01T00:00:00.0000000</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>Microsoft.WindowsAzure.ServiceRuntime.Commands.dll-Help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName>Microsoft.WindowsAzure.ServiceRuntime.Commands.dll-Help.xml</FileName>
+    <SourceDir>C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.8\bin\plugins\RemoteAccess\</SourceDir>
+    <CreatedDateTime>2017-02-27T09:44:55.4243770+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>PowerGadgets.Commands.dll-Help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName>PowerGadgets.Commands.dll-Help.xml</FileName>
+    <SourceDir>C:\Program Files\PowerGadgets\</SourceDir>
+    <CreatedDateTime>2017-02-27T09:44:55.4243770+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName>Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml</FileName>
+    <SourceDir>C:\Users\cha.FACILIA\.vscode\extensions\ms-vscode.PowerShell-0.8.0\modules\PSScriptAnalyzer\en-US\</SourceDir>
+    <CreatedDateTime>2017-02-27T09:44:55.4243770+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>PSReadline.dll-help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName>PSReadline.dll-help.xml</FileName>
+    <SourceDir>C:\Users\cha.FACILIA\Documents\WindowsPowerShell\Modules\PSReadline\en-US\</SourceDir>
+    <CreatedDateTime>2017-02-27T09:44:55.4243770+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>PMicrosoft.PowerShell.Utility.psm1-help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName>Microsoft.PowerShell.Utility.psm1-help.xml</FileName>
+    <SourceDir>C:\Windows\SysWOW64\WindowsPowerShell\v1.0\en-US\</SourceDir>
+    <CreatedDateTime>2017-02-27T09:44:55.4243770+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>Microsoft.Web.Deployment.PowerShell.dll-Help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName></FileName>
+    <SourceDir>C:\Program Files\IIS\Microsoft Web Deploy V3</SourceDir>
+    <CreatedDateTime>2017-02-27T09:53:35.9562893+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>PSReadline.dll-help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName></FileName>
+    <SourceDir>C:\Users\cha.FACILIA\Documents\WindowsPowerShell\Modules\PSReadline\en-US</SourceDir>
+    <CreatedDateTime>2017-02-27T09:56:17.1133475+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>Microsoft.WindowsAzure.ServiceRuntime.Commands.dll-Help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName></FileName>
+    <SourceDir>C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.8\bin\plugins\RemoteAccess</SourceDir>
+    <CreatedDateTime>2017-02-27T09:59:28.1338070+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>PowerGadgets.Commands.dll-Help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName></FileName>
+    <SourceDir>C:\Program Files\PowerGadgets</SourceDir>
+    <CreatedDateTime>2017-02-27T09:59:40.3956434+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+  <MruItem>
+    <Name>FaciliaPS.dll-help.xml</Name>
+    <Title></Title>
+    <Description>Ikke noget at tilføje her</Description>
+    <FileName></FileName>
+    <SourceDir>C:\Facilia\Klienter\FaciliaPS\FaciliaPS\Help</SourceDir>
+    <CreatedDateTime>2017-02-27T09:59:57.8824323+01:00</CreatedDateTime>
+    <IsSticky>False</IsSticky>
+  </MruItem>
+</MruItems>
