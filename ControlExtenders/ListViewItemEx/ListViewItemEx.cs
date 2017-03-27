@@ -16,6 +16,7 @@ namespace PSHelpEdit.ControlExtenders
         #region Pependency property decleration
         public static DependencyProperty EditmodeProperty;
         #endregion
+        //
         #region Static initialisation
         static ListViewItemEx()
         {

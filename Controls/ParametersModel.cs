@@ -29,6 +29,7 @@ namespace PSHelpEdit.Controls
         private RelayCommand _cmdEditSyntaxParam;
         private RelayCommand _cmdDeleteParam;
         private RelayCommand _cmdDeleteSyntaxParam;
+        private RelayCommand _cmdSyntaxItemSelectionChanged;
         #endregion
         //
         #region Private fields
@@ -103,6 +104,15 @@ namespace PSHelpEdit.Controls
         #endregion
         //
         #region Commands impl
+        public ICommand CmdSyntaxItemSelectionChanged
+        {
+            get
+            {
+                if (_cmdSyntaxItemSelectionChanged == null)
+                    _cmdSyntaxItemSelectionChanged = new RelayCommand(CmdHandler_SyntaxItemSelectionChanged);
+                return _cmdSyntaxItemSelectionChanged;
+            }
+        }
         public ICommand CmdAddParam
         {
             get
@@ -250,6 +260,11 @@ namespace PSHelpEdit.Controls
         #endregion
         //
         #region  Command handlers implementation
+        private void CmdHandler_SyntaxItemSelectionChanged(object data)
+        {
+            int i = 0;
+            i++;
+        }
         private void CmdHandler_AddParam(object data)
         {
 
@@ -262,13 +277,18 @@ namespace PSHelpEdit.Controls
         {
 
         }
+
         private void CmdHandler_EditSyntaxParam(object data)
         {
             if(SelectedSyntaxParam != null)
             {
+                ShadowItem = new ParameterShadowItem(SelectedSyntaxParam);
                 SelectedSyntaxParam.EditMode = true;
             }
         }
+
+
+
         private void CmdHandler_DeleteParam(object data)
         {
 
@@ -278,6 +298,7 @@ namespace PSHelpEdit.Controls
 
         }
         #endregion
+
         private void KeyHandler_SetCurrentParamEditmode(ParameterItem param)
         {
             if(param != null)

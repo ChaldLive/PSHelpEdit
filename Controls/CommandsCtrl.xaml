@@ -155,17 +155,25 @@
                                         <ext:ToolBarButton Header="Delete" ImageSource="/PSHelpEdit;component/Resources/Delete_16x16.png" Margin="0,0,3,0"/>
                                     </ToolBar>
                                     <ext:ListViewEx Grid.Row="1" 
-                                              ItemsSource="{Binding Path=SyntaxParams}" 
-                                              SelectedItem="{Binding Path=SelectedSyntaxParam}"
-                                              Margin="7,7,7,7">
+                                                    ItemsSource="{Binding Path=SyntaxParams}" 
+                                                    SelectedItem="{Binding Path=SelectedSyntaxParam}"
+                                                    Margin="7,7,7,7">
                                         <ListView.View>
                                             <GridView>
-                                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=NameValue}" />
+                                                <GridViewColumn Header="Name">
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <TextBox Text="{Binding Path=NameValue}" IsEnabled="{Binding Path=EditMode}" BorderThickness="0"/>
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
                                                 <GridViewColumn Header="Required">
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                                <CheckBox IsChecked="{Binding Path=Required}" />
+                                                                <CheckBox IsChecked="{Binding Path=Required}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
@@ -174,7 +182,7 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel>
-                                                                <CheckBox IsChecked="{Binding Path=VariableLenght}" />
+                                                                <CheckBox IsChecked="{Binding Path=VariableLenght}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
@@ -183,7 +191,7 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel>
-                                                                <CheckBox IsChecked="{Binding Path=Globbing}" />
+                                                                <CheckBox IsChecked="{Binding Path=Globbing}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
@@ -192,14 +200,28 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel>
-                                                                <CheckBox IsChecked="{Binding Path=PipelineInput}" />
+                                                                <CheckBox IsChecked="{Binding Path=PipelineInput}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
                                                 </GridViewColumn>
-                                                <GridViewColumn Header="Possition" DisplayMemberBinding="{Binding Path=Possition}"/>
+                                                <GridViewColumn Header="Possition" >
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <TextBox Text="{Binding Path=Possition}" IsEnabled="{Binding Path=EditMode}" BorderThickness="0"/>
+                                                            </DockPanel>
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
                                             </GridView>
                                         </ListView.View>
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="SelectionChanged">
+                                                <i:InvokeCommandAction Command="{Binding CmdSyntaxItemSelectionChanged}"
+                                                                       CommandParameter="{Binding Path=SelectedSyntaxParam}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
                                     </ext:ListViewEx>
                                 </Grid>
                             </GroupBox>
@@ -225,7 +247,7 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                                <CheckBox IsChecked="{Binding Path=Required}" />
+                                                                <CheckBox IsChecked="{Binding Path=Required}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
@@ -234,7 +256,7 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel>
-                                                                <CheckBox IsChecked="{Binding Path=VariableLenght}" />
+                                                                <CheckBox IsChecked="{Binding Path=VariableLenght}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
@@ -243,7 +265,7 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel>
-                                                                <CheckBox IsChecked="{Binding Path=Globbing}" />
+                                                                <CheckBox IsChecked="{Binding Path=Globbing}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>
@@ -252,7 +274,7 @@
                                                     <GridViewColumn.CellTemplate>
                                                         <DataTemplate>
                                                             <DockPanel>
-                                                                <CheckBox IsChecked="{Binding Path=PipelineInput}" />
+                                                                <CheckBox IsChecked="{Binding Path=PipelineInput}" IsEnabled="{Binding Path=EditMode}" />
                                                             </DockPanel>
                                                         </DataTemplate>
                                                     </GridViewColumn.CellTemplate>

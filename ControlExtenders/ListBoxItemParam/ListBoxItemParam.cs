@@ -38,6 +38,7 @@ namespace PSHelpEdit.ControlExtenders
         #region Dynamic initialisation
 
         #endregion
+        //
         #region Dependency properties getters and setters
         /// <summary>
         /// Gets or sets a value indicating whether [edit mode].

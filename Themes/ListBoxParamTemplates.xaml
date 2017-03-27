@@ -5,7 +5,7 @@
                     xmlns:ctlx ="clr-namespace:PSHelpEdit.ControlExtenders">
     <!--
     
-    -->
+    --><!--
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -19,9 +19,9 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <!--
+    --><!--
         Standard control template som de bruges af listbox ikke noget fance pancy stuff her
-    -->
+    --><!--
     <ControlTemplate TargetType="{x:Type ctlx:ListBoxItemParam}" x:Key="{x:Static keys:ResourceKeys.ListboxItemParamStdControlTemplateKey}" >
 
         <Border x:Name="Bd" 
@@ -64,9 +64,9 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <!--
+    --><!--
     
-    -->
+    --><!--
     <ControlTemplate TargetType="{x:Type ctlx:ListBoxItemParam}" x:Key="{x:Static keys:ResourceKeys.ListboxItemParamEditControlTemplateKey}">
 
         <Border x:Name="Bd" 
@@ -119,9 +119,9 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <!--
+    --><!--
     
-    -->
+    --><!--
     <Style TargetType="{x:Type ctlx:ListBoxItemParam}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Padding" Value="4,1"/>
@@ -140,7 +140,7 @@
                 <Setter Property="Template"  Value="{DynamicResource {x:Static keys:ResourceKeys.ListboxItemParamEditControlTemplateKey}}"/>
             </Trigger>
         </Style.Triggers>
-    </Style>
+    </Style>-->
 
 
 </ResourceDictionary>

@@ -5,7 +5,7 @@
                     xmlns:ctlx ="clr-namespace:PSHelpEdit.ControlExtenders">
 
     <!--#region Focus visual resources-->
-    <!--<Style x:Key="ListViewItemFocusVisual">
+    <Style x:Key="ListViewItemFocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -13,7 +13,7 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>-->
+    </Style>
     <!--#endregion-->
     
     <!--#region Standard ListViewItem constrol template-->

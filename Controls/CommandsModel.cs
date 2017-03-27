@@ -65,8 +65,7 @@ namespace PSHelpEdit.Controls
             }
         }
         #endregion
-
-
+        //
         #region CommandsModel(CommandRootItem root)
         public CommandsModel(CommandRootItem root)
         {
@@ -74,7 +73,7 @@ namespace PSHelpEdit.Controls
             Root = root;
         }
         #endregion
-
+        //            
         #region Public properties
         public CommandRootItem Root
         {
@@ -158,7 +157,7 @@ namespace PSHelpEdit.Controls
             }
         }
         #endregion
-
+        //
         #region public void Load(string fileName)
         public void Load(string fileName)
         {
@@ -169,7 +168,7 @@ namespace PSHelpEdit.Controls
             Root = tmp;
         }
         #endregion
-
+        //
         #region public void Update()
         public void Update()
         {
@@ -252,15 +251,15 @@ namespace PSHelpEdit.Controls
         public override void OnModelKeyDown(object model, System.Windows.Input.KeyEventArgs e)
         {
             base.OnModelKeyDown(model, e);
-            if(CmdDetails != null)
+            if (CmdDetails != null)
             {
                 CmdDetails.OnModelKeyDown(model, e);
             }
-            if(!e.Handled && ParametersModel != null)
+            if (!e.Handled && ParametersModel != null)
             {
                 ParametersModel.OnModelKeyDown(model, e);
             }
-            if(e.Handled == false)
+            if (e.Handled == false)
             {
                 if(e.Key == System.Windows.Input.Key.Escape)
                 {
@@ -274,6 +273,7 @@ namespace PSHelpEdit.Controls
                 if (e.Key == System.Windows.Input.Key.F2)
                 {
                     SetSelectedCommandItemInEditmode();
+                    e.Handled = true;
                 }
             }
         }
