@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/edit_16x16.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("howto.txt")]
 
 

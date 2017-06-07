@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using PSHelpEdit.Commands;
 using PSHelpEdit.ControlExtenders;
 using PSHelpEdit.Dlg.CommandSaveDlg;
@@ -38,6 +39,8 @@ namespace PSHelpEdit.Controls
         private ParameterItem _selectedParam;
         private ParameterItem _selectedSyntaxParam;
         private ParameterShadowItem _shadowParam;
+        private ImageSource _imageSource;
+        private object _header;
         #endregion
         //
         #region Dynamic initialisation
@@ -101,6 +104,27 @@ namespace PSHelpEdit.Controls
             get { return _shadowParam; }
             set { _shadowParam = value; }
         }
+        public ImageSource ImageSource
+        {
+            get{return _imageSource;}
+            set
+            {
+                OnPropertyChanging();
+                _imageSource = value;
+                OnPropertyChanged();
+            }
+        }
+        public object Header
+        {
+            get{return _header; }
+            set
+            {
+                OnPropertyChanging();
+                _header = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
         //
         #region Commands impl

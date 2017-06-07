@@ -1,0 +1,41 @@
+/********************************************************************************************************
+* Denne fil beskriver strukturen i et hjælpe xml dokument for en hel stribe af sammenhængende cmdlets.
+*
+*
+********************************************************************************************************/
+
+
+1. Oprettelse af command hjælp Command tag.: <command:command><command:command/>
+
+2. Oprettelse af et details element til Command typen
+	a.	<command:command>
+			<command:details></command:details>
+		<command:command/>
+3. Der oprettes 4 barne elementer til details elementet: Henholdsvis:
+	Navn elelemtet		Navnet på den ps command, der skal beskrives.
+	Verb elementet		Navnet på det efterfølgende udsagnsord (verb)
+	Noun elementet		Navneorde, der siger noget om cmdlets eller ps funtiones virkemåde.
+	
+	a.	<command:command>
+			<command:details>
+				<command:name>Send-FaciliaPS_SomeCmdlet</command:name>
+				<command:verb>Send-</command:verb>
+				<command:noun>FaciliaPS_SomeCmdlet</command:noun>
+				<maml:description>
+					<maml:para>Noget ekstra formateret tekst</maml:para>
+							.
+							.
+							.
+				</maml:description>
+			</command:details>
+		<command:command/>
+
+	
+
+
+
+
+Typisk består en command af følgende 5 stk hjælpe punkter:
+1.Command tag oprettes i xml documented.
+a.CommandDetails oprettes.
+				

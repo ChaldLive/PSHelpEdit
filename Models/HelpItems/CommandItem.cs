@@ -32,13 +32,13 @@ namespace PSHelpEdit.Models
     [XmlTagType("command",HelpItemTypes.command)]
     public class CommandItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private List<string> _verbs;
         private SyntaxItem _syntaxItem;
         private bool _editMode;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandItem" /> class.
         /// </summary>
@@ -73,7 +73,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public override string NameValue
         {
             get
@@ -329,7 +329,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         public ParameterItem AddParameter(string paramName)
         {
             ParamUtil.IsNull(paramName, "string paramName", "Parameteren er ikke korrekt initialiseret i kaldet til AddParameter metoden.");
@@ -350,7 +350,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Overridden methods. ♦
+        #region Overridden methods.
         /// <summary>
         /// Called when [property notify changed].
         /// </summary>
@@ -399,7 +399,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Property changed event handlers. ♦
+        #region Property changed event handlers.
         private void OnVerbChanged(string newVerbName)
         {
             string commandName = CommandName;
@@ -433,10 +433,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private load helpers. ♦
+        #region Private load helpers.
         #endregion
         //
-        #region ♦ Protected property getters and setters helpers ♦
+        #region Protected property getters and setters helpers
 
         protected string Get_ReturnTypeUri()
         {
@@ -929,7 +929,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Remap values private helpers ♦
+        #region Remap values private helpers
         private void RemapLayoutValues()
         {
             HelpItemBase detailsItem = GetChildWithName(Defines.details);

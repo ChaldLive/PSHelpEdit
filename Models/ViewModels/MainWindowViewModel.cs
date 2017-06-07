@@ -10,6 +10,11 @@ using PSHelpEdit.Utils;
 
 namespace PSHelpEdit.Models
 {
+    /// <summary>
+    /// Der er en forklaring på rækkefølge og hvordan, der oprettes model
+    /// elementer til et help item.
+    /// Kig i tekst filen <seealso cref=""/>
+    /// </summary >
     public class MainWindowViewModel : ModelBase, IXSerialize
     {
         //
@@ -114,7 +119,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public methods  ♦
+        #region Public methods  
         public void LoadFromFile(string fileName)
         {
             ParamUtil.IsFile(fileName, "string fileName", "Parameteren er ikke korrekt initialiseret i kaldet til: LoadFromFile(string fileName)");
@@ -132,7 +137,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private commands handlers ♦
+        #region  Private commands handlers 
         private void OnAddCmdCommandHandler(object data)
         {
 
@@ -155,7 +160,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Private helpers ♦
+        #region Private helpers 
         private void MapCommandItemAndSubItem(CommandItem cmdItem)
         {
             if (cmdItem == null)

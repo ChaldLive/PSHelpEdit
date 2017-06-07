@@ -19,7 +19,7 @@ namespace PSHelpEdit.Models
     public class HelpItemBase : ModelBase, IHelpItem, INotifyPropertyChanged, INotifyPropertyChanging
     {
         //
-        #region ♦ Private fields ♦
+        #region Private fields
         private string _name;
         private object _value;
         private string _nameValue;
@@ -32,7 +32,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public HelpItemBase()
         {
             _isExpanded = false;
@@ -72,7 +72,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public virtual IHelpItem Parent
         {
             get { return _parent; }
@@ -502,9 +502,6 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
-        #endregion
-        //
         #region IXSerialize Members 
         /// <summary>
         /// Gets the name of the element.
@@ -566,7 +563,10 @@ namespace PSHelpEdit.Models
 
         private void ChildrenCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add 
+                || e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove
+                || e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace
+                || e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Reset)
             {
                 IHelpItem nextNewChild = null;
                 foreach (object newChild in e.NewItems)
@@ -577,6 +577,7 @@ namespace PSHelpEdit.Models
                     }
                 }
             }
+            OnPropertyChanged("Children");
         }
         #endregion
         //

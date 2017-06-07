@@ -16,10 +16,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("helpItems", HelpItemTypes.helpItems)]
     public class HelpItems : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region  Private fields 
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region  Constructors 
         /// <summary>
         /// Initializes a new instance of the <see cref="HelpItems"/> class.
         /// </summary>
@@ -44,13 +44,22 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region  Public properties. 
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region  Public Methods. 
+        public CommandItem AddNewCommandItem(string verb, string noun)
+        {
+            CommandItem result = new CommandItem();
+            result.Verb = verb;
+            result.Noun = noun;
+            result.Name = $"{verb}-{noun}";
+            AddChild(result);
+            return result;
+        }
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region  Protected Methods. 
         public override void Load(XElement e)
         {
             PersistState = PersistState.IsLoading;
@@ -68,10 +77,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region  Private Methods. 
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region  Abstract virtual methods. 
         #endregion
     }
 }
