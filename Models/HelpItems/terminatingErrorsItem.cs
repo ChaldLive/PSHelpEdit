@@ -12,7 +12,7 @@ namespace PSHelpEdit.Models
     public class TerminatingErrorsItem : HelpItemBase
     {
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="AlertItem"/> class.
         /// </summary>
@@ -40,7 +40,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Base overridden methods ♦
+        #region Base overridden methods
         public override void Load(XElement e)
         {
             base.Load(e);

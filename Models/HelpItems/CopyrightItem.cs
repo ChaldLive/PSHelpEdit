@@ -14,10 +14,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("copyright", HelpItemTypes.copyright)]
     public class CopyrightItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public CopyrightItem()
         {
         }
@@ -40,7 +40,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
 
         public string ParaValue
         {
@@ -56,7 +56,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         public void AddPara(string value)
         {
             ParaItem para = GetChildWidthName<ParaItem>(HelpItemTypes.para.ToString());
@@ -72,7 +72,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         protected string Get_ParaValue()
         {
             string result = string.Empty;
@@ -90,10 +90,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
       

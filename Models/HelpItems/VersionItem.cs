@@ -15,7 +15,7 @@ namespace PSHelpEdit.Models
     public class VersionItem : HelpItemBase
     {
         //
-        #region ♦  Constructor ♦
+        #region  Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionItem"/> class.
         /// </summary>
@@ -39,13 +39,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         #endregion
         //
-        #region ♦ Public methods. ♦
+        #region Public methods.
         #endregion
         //
-        #region ♦  Base overridden methods. ♦
+        #region  Base overridden methods.
         /// <summary>
         /// Loads the specified e.
         /// </summary>

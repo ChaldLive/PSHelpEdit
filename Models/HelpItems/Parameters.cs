@@ -14,10 +14,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("parameters", HelpItemTypes.parameters)]
     public class Parameters : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public Parameters(string name)
             :base(name)
         {
@@ -28,19 +28,19 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
       

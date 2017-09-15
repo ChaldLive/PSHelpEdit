@@ -14,11 +14,11 @@ namespace PSHelpEdit.Utils
     /// </summary>
     public class XSerializer : IDisposable
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private XDocument _document;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="XSerializer"/> class.
         /// </summary>
@@ -28,7 +28,7 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         /// <summary>
         /// Gets the document.
         /// </summary>
@@ -40,7 +40,7 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         /// <summary>
         /// Saves the specified file name.
         /// </summary>

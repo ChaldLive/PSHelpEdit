@@ -14,10 +14,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("details", HelpItemTypes.details)]
     public class DetailsItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="DetailsItem"/> class.
         /// </summary>
@@ -44,7 +44,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public void AddVerbItem(string verb)
         {
             VerbItem verbItem = GetChildWidthName<VerbItem>(HelpItemTypes.verb.ToString());
@@ -115,16 +115,16 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
       

@@ -14,19 +14,19 @@ namespace PSHelpEdit.Models
     public class HelpItemFactory
     {
         //
-        #region ♦ Private items ♦
+        #region Private items
         private static HelpItemFactory _instance;
         private Dictionary<HelpItemTypes, Type> _iemTypes;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         protected HelpItemFactory()
         {
             ParseHelpitemTypes();
         }
         #endregion
         //
-        #region ♦  Public properties ♦
+        #region  Public properties
         /// <summary>
         /// Gets the help item types.
         /// </summary>
@@ -60,7 +60,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public methods ♦
+        #region Public methods
         /// <summary>
         /// Creates the attribute item.
         /// </summary>
@@ -238,7 +238,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private methods ♦
+        #region Private methods
         private void ParseHelpitemTypes()
         {
             Assembly ass = Assembly.GetExecutingAssembly();

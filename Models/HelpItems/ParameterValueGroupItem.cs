@@ -15,11 +15,11 @@ namespace PSHelpEdit.Models
     public class ParameterValueGroupItem : HelpItemBase
     {
         //
-        #region ♦ Private fields. ♦
+        #region Private fields.
         private ObservableCollection<ParameterValueItem> _values;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="ParameterValueGroupItem"/> class.
         /// </summary>
@@ -55,7 +55,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public ObservableCollection<ParameterValueItem> Values
         {
             get 
@@ -71,7 +71,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Base overridden methods. ♦
+        #region Base overridden methods.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -83,7 +83,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private helper methods  ♦
+        #region Private helper methods 
         private void RemapValues()
         {
             IEnumerable<ParameterValueItem> valuesInGroup = GetChildrenWithName<ParameterValueItem>(HelpItemTypes.parameterValue.ToString());

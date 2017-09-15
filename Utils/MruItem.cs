@@ -169,10 +169,10 @@ namespace PSHelpEdit.Utils
         }
         #endregion        
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         //
         #region Load item helpers
         private void LoadName(XElement parent)
@@ -342,7 +342,7 @@ namespace PSHelpEdit.Utils
         //
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
 
         #endregion
     }

@@ -11,11 +11,11 @@ namespace PSHelpEdit.Utils
     /// </summary>
     public class Reflections
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private static Reflections _instance;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="Reflections"/> class.
         /// </summary>
@@ -24,7 +24,7 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public static Reflections Instance
         {
             get
@@ -36,7 +36,7 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Public static Methods. ♦
+        #region Public static Methods.
         /// <summary>
         /// Gets all system types.
         /// </summary>
@@ -61,13 +61,13 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
 }

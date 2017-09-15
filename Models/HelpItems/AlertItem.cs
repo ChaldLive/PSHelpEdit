@@ -12,10 +12,10 @@ namespace PSHelpEdit.Models
     public class AlertItem : HelpItemBase
     {
         //
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="AlertItem"/> class.
         /// </summary>
@@ -43,7 +43,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
 
         public string Description
         {
@@ -59,7 +59,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Private helper methods ♦
+        #region Private helper methods
         protected string Get_Description()
         {
             string result = string.Empty;
@@ -80,7 +80,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Base overridden methods ♦
+        #region Base overridden methods
         public override void Load(XElement e)
         {
             base.Load(e);

@@ -15,10 +15,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("description", HelpItemTypes.description)]
     public class DescriptionItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="DescriptionItem"/> class.
         /// </summary>
@@ -46,7 +46,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public string ParaValue
         {
             get { return Get_ParaValue(); }
@@ -59,7 +59,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -70,7 +70,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
 
         protected string Get_ParaValue()
         {
@@ -92,10 +92,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
       

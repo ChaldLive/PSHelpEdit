@@ -9,12 +9,12 @@ namespace PSHelpEdit.Utils
 {
     public class TypeInfoUtil
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private static TypeInfoUtil _instance;
         private List<string> _typeInfoNames;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -24,7 +24,7 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public static TypeInfoUtil Instance
         {
             get
@@ -48,7 +48,7 @@ namespace PSHelpEdit.Utils
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         private List<string> LoadOrMapTypeInfoNames()
         {
             List<string> typeInfoNames = TryLoadFromFileOfInfotypes();
@@ -111,7 +111,7 @@ namespace PSHelpEdit.Utils
 
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
 }

@@ -14,10 +14,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("inputTypes", HelpItemTypes.inputTypes)]
     public class InputTypesItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -34,13 +34,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Baee overridden Methods. ♦
+        #region Baee overridden Methods.
         #endregion
     }
 }

@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\GitHub\PSHelpEdit\obj\Debug\
+D:\Work\VS2017\Projects\WPF\GitRepos\PSHelpEdit\obj\Debug\
 PSHelpEdit
 none
 false
 DEBUG;TRACE
-C:\GitHub\PSHelpEdit\App.xaml
+D:\Work\VS2017\Projects\WPF\GitRepos\PSHelpEdit\App.xaml
 9103951331
 
-96-966419782
+96719194427
 19-1153441248
 Controls\CommandsCtrl.xaml;Dlg\CommandSaveDlg\CmdSaveWnd.xaml;MainWindow.xaml;Themes\ListViewExTemplates.xaml;Themes\ToolBarButton.xaml;Themes\DefaultSkin.xaml;Themes\Generic.xaml;Themes\ListBoxParamTemplates.xaml;Themes\ListboxTemplates.xaml;
 

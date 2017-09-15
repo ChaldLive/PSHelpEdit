@@ -13,12 +13,12 @@ namespace PSHelpEdit.Models
     public class ReturnValueItem : HelpItemBase
     {
         //
-        #region ♦ Private fields ♦
+        #region Private fields
         private List<string> _returnDevTypes;
         private string _selctedDevReturnType;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public ReturnValueItem()
         {
 
@@ -35,7 +35,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Base overridden methods. ♦
+        #region Base overridden methods.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -47,7 +47,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public List<string> ReturnDevTypes
         {
             get
@@ -92,7 +92,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private helpers ♦
+        #region Private helpers
         private void LoadInputTypesIntoMemory()
         {
             if (ReturnDevTypes.Count > 0)

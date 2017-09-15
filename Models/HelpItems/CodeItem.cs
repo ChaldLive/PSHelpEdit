@@ -13,7 +13,7 @@ namespace PSHelpEdit.Models
     public class CodeItem : HelpItemBase
     {
         //
-        #region ♦ Constructors  ♦
+        #region Constructors 
         public CodeItem(string name)
             :base(name)
         {
@@ -26,13 +26,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         #endregion
         //
-        #region ♦ Public methods ♦
+        #region Public methods
         #endregion
         //
-        #region ♦ Base overridden ♦
+        #region Base overridden
         /// <summary>
         /// Saves the specified e.
         /// </summary>

@@ -15,10 +15,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("introduction", HelpItemTypes.introduction)]
     public class IntroductionItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -35,13 +35,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden methods. ♦
+        #region Base overridden methods.
         public override void Load(XElement e)
         {
             base.Load(e);

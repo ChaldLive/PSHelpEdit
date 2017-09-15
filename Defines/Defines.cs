@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace PSHelpEdit
 {
-    #region ♦ TreeViewItem state definitions ♦
+    #region TreeViewItem state definitions
     public enum ItemState : int
     {
         IsNoState,
@@ -24,7 +24,7 @@ namespace PSHelpEdit
     }
     #endregion
     //
-    #region ♦ Helpitem types ♦
+    #region Helpitem types
     public enum HelpItemTypes : int
     {
         alertSet,
@@ -70,7 +70,7 @@ namespace PSHelpEdit
     }
     #endregion
     //
-    #region ♦ HelpItem state enums ♦
+    #region HelpItem state enums
     /// <summary>
     /// Enum PersistState
     /// </summary>
@@ -90,11 +90,11 @@ namespace PSHelpEdit
     public static class Defines
     {
         //
-        #region ♦ Private fields ♦
+        #region Private fields
         private static string[] _parameterValueTypes;
         #endregion
         //
-        #region ♦ Standard string defines. ♦
+        #region Standard string defines.
         public static string CopyrigthValue = "Copyright ©  2015 FACILIA f.m.b.a";
         public static string DefaultVersionValue = "Version 1.0";
         public static char[] CommandNameSplitterChar1 = new char[] { '-' };
@@ -102,14 +102,14 @@ namespace PSHelpEdit
         public static readonly string PART_ParamHeaderText = "PART_ParamHeaderText";
         #endregion
         //
-        #region ♦ Static initialisation  ♦
+        #region Static initialisation 
         static Defines()
         {
 
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         public static string[] CommandVerbNames
         {
             get
@@ -130,14 +130,14 @@ namespace PSHelpEdit
 
         #endregion
         //
-        #region ♦ XDocument defines declarations. ♦
+        #region XDocument defines declarations.
         public static string XVersion       = "";
         public static string XEncodingUTF8  = "UTF-8";
         public static string XStandaloneNo  = "No";
         public static string XStandaloneYes = "Yes";
         #endregion
         //
-        #region ♦ Maml help definition namespaces- ♦
+        #region Maml help definition namespaces-
         public static XNamespace HelpItemsUri        = "http://msh";
         public static string SchemaName              = "maml";
         public static XNamespace DevNameSpaceUri     = "http://schemas.microsoft.com/maml/dev/2004/10";
@@ -150,7 +150,7 @@ namespace PSHelpEdit
         public static string XmlNsNameSpaceName      = "xmlns";
         #endregion
         //
-        #region ♦ Private methods ♦
+        #region Private methods
         private static void InitParameterValueTypes()
         {
             _parameterValueTypes = new string[]
@@ -176,7 +176,7 @@ namespace PSHelpEdit
         }
         #endregion
         //
-        #region ♦ Std schema element names version 2 ♦
+        #region Std schema element names version 2
         public const string alertSet             = "alertSet";
         public const string alert                = "alert";
         public const string notAHelpItem         = "notAHelpItem";
@@ -215,7 +215,7 @@ namespace PSHelpEdit
         public const string noun                 = "noun";
         #endregion
         //
-        #region ♦ Helpitem attribute names declared here. ♦
+        #region Helpitem attribute names declared here.
         public static string required            = "required";
         public static string variableLength      = "variableLength";
         public static string globbing            = "globbing";
@@ -223,7 +223,7 @@ namespace PSHelpEdit
         public static string position            = "position";
         #endregion
         //
-        #region ♦ command parameter attribute names ♦
+        #region command parameter attribute names
         public static class ParameterAttributeNames
         {
             public static string required       = "required";
@@ -234,11 +234,11 @@ namespace PSHelpEdit
         }
         #endregion
         //
-        #region ♦ Standard file names declared here ♦
+        #region Standard file names declared here
         public static string DotNetTypesFileName = "stdtypes.xml";
         #endregion
         //
-        #region ♦ Standard system types names. ♦
+        #region Standard system types names.
         public static string UnknownSystemTypeName = "Unknown";
         #endregion
         //
@@ -363,7 +363,7 @@ namespace PSHelpEdit
         }
         #endregion
         //
-        #region ♦ Cmdlet Communication verbs ♦
+        #region Cmdlet Communication verbs
         #endregion
 
     }

@@ -29,7 +29,7 @@ namespace PSHelpEdit.Dlg.CommandSaveDlg
         private bool _editMode;
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public string NameValue
         {
             get

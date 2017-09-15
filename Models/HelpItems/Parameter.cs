@@ -15,12 +15,12 @@ namespace PSHelpEdit.Models
     [XmlTagType("parameter", HelpItemTypes.parameter)]
     public class ParameterItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private ParameterValueGroupItem _valueGroup;
         private bool _editMode;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public ParameterItem()
         {
 
@@ -48,7 +48,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public override string NameValue
         {
             get
@@ -191,7 +191,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -219,9 +219,9 @@ namespace PSHelpEdit.Models
         }
 
         //
-        #region ♦ Property Getter and setter methods aiding the problem of values in sub items in the XML tree structure. ♦
+        #region Property Getter and setter methods aiding the problem of values in sub items in the XML tree structure.
         //
-        #region ♦ TypeItemValue getter and setter ♦
+        #region TypeItemValue getter and setter
         protected string Get_TypeItemValue()
         {
             string result = string.Empty;
@@ -244,7 +244,7 @@ namespace PSHelpEdit.Models
         }
         #endregion                
         //
-        #region ♦  TypeItem getter and setter♦
+        #region  TypeItem getter and setter♦
         protected TypeItem Get_TypeItem()
         {
             TypeItem type = GetChildWidthNameRecursive<TypeItem>(HelpItemTypes.type.ToString());
@@ -261,7 +261,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ VariableLength setter and getter ♦
+        #region VariableLength setter and getter
         protected bool Get_VariableLength()
         {
             bool result = false;
@@ -282,7 +282,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Required getter and setter ♦
+        #region Required getter and setter
         protected bool Get_Required()
         {
             bool result = false;
@@ -303,7 +303,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Globbing getter and setter ♦
+        #region Globbing getter and setter
         protected bool Get_Globbing()
         {
             bool result = false;
@@ -324,7 +324,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦  PipelineInput getter and setter ♦
+        #region  PipelineInput getter and setter
         protected bool Get_PipelineInput()
         {
             bool result = false;
@@ -345,7 +345,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦  Possition getter and setter ♦
+        #region  Possition getter and setter
         protected string Get_Possition()
         {
             string result = string.Empty;
@@ -366,7 +366,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦  NameText getter and setter ♦
+        #region  NameText getter and setter
         protected void Set_NameText(string value)
         {
             HelpItemBase nameItem = GetChildWithName(HelpItemTypes.name.ToString());
@@ -387,7 +387,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ NameValue getter and setter ♦
+        #region NameValue getter and setter
         protected string Get_NameValue()
         {
             string result = string.Empty;
@@ -408,7 +408,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Description getter and setter ♦
+        #region Description getter and setter
         protected void Set_Description(string value)
         {
             DescriptionItem description = GetChildWidthName<DescriptionItem>(Defines.description);
@@ -429,7 +429,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Type Uri Getter and setter ♦
+        #region Type Uri Getter and setter
         protected string Get_TypeUri()
         {
             string result = string.Empty;
@@ -459,7 +459,7 @@ namespace PSHelpEdit.Models
         #endregion
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         private void RemapHorizontallyAndVertically()
         {
             RemapParameterValueGroup();

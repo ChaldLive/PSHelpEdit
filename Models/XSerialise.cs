@@ -13,11 +13,11 @@ namespace PSHelpEdit.Models
     /// </summary>
     public class XSerialise : TreeItemModel
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private string _elementName;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -35,7 +35,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public virtual string ElementName
         {
             get{return _elementName;}
@@ -43,7 +43,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public abstract Methods. ♦
+        #region Public abstract Methods.
         public virtual void Load(XElement e)
         {
 
@@ -54,13 +54,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
 

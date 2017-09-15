@@ -12,7 +12,7 @@ namespace PSHelpEdit.Models
     public class ReturnValuesItem : HelpItemBase
     {
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public ReturnValuesItem()
         {
 
@@ -29,7 +29,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Base overridden methods. ♦
+        #region Base overridden methods.
         public override void Load(XElement e)
         {
             base.Load(e);

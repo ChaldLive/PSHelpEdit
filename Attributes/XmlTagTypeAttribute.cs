@@ -15,12 +15,12 @@ namespace PSHelpEdit.Attributes
     public class XmlTagTypeAttribute : Attribute
     {
         //
-        #region ♦  Private fields ♦
+        #region  Private fields
         private HelpItemTypes _helpItemItype;
         private string _tagName;
         #endregion
         //
-        #region ♦  Constructors ♦
+        #region  Constructors
         /// <summary>
         /// Definerer en klasse, der er dekoreret med denne attribut
         /// som en klasse, der kan håndtere cmdlet xml dokumenterings elementer<see cref="XmlTagType"/> class.
@@ -34,7 +34,7 @@ namespace PSHelpEdit.Attributes
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         /// <summary>
         /// Gets the help item itype.
         /// </summary>

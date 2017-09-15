@@ -13,7 +13,7 @@ namespace PSHelpEdit.Models
     /// </summary>
     public class TreeItemModel : ModelBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private ObservableCollection<TreeItemModel> _children;
         private ObservableCollection<TreeItemModel> _attributes;
         private string _itemTitle;
@@ -47,7 +47,7 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public ObservableCollection<TreeItemModel> Children
         {
             get

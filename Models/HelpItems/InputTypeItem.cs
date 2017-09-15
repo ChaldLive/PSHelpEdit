@@ -16,12 +16,12 @@ namespace PSHelpEdit.Models
     [XmlTagType("inputType", HelpItemTypes.inputType)]
     public class InputTypeItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private List<string> _inputDevTypes;
         private string _selctedDevInputType;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -38,7 +38,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         /// <summary>
         /// Gets the input dev types.
         /// </summary>
@@ -87,10 +87,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden. ♦
+        #region Base overridden.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -102,7 +102,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private helper methods. ♦
+        #region Private helper methods.
         private void RemapSubitemValues()
         {
             GetDescriptionValue();

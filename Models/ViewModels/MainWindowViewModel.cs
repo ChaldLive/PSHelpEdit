@@ -18,23 +18,23 @@ namespace PSHelpEdit.Models
     public class MainWindowViewModel : ModelBase, IXSerialize
     {
         //
-        #region ♦ Private fields  
+        #region Private fields  
         private IHelpItem _rootItem;
         private CommandItem _selectedItem;
         private List<CommandItem> _commandItems;
         #endregion
         //
-        #region ♦ Commands definitions ♦
+        #region Commands definitions
         private RelayCommand _onCmdLoaded;
         private RelayCommand _onAddCmdCommand;
         private RelayCommand _onRemoveCmdCommand;
         private RelayCommand<CommandItem> _onItemSelectionChanged;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         #endregion
         //
-        #region ♦ Commands getters and setters. ♦
+        #region Commands getters and setters.
         public ICommand OnCmdLoaded
         {
             get
@@ -74,7 +74,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         /// <summary>
         /// Gets or sets the root item.
         /// </summary>

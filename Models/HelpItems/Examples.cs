@@ -13,7 +13,7 @@ namespace PSHelpEdit.Models
     public class Examples : HelpItemBase
     {
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="Examples"/> class.
         /// </summary>
@@ -37,13 +37,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         #endregion
         //
-        #region ♦ Public methods ♦
+        #region Public methods
         #endregion
         //
-        #region ♦ Base overridden methods ♦
+        #region Base overridden methods
         /// <summary>
         /// Saves the specified e.
         /// </summary>

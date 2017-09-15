@@ -15,11 +15,11 @@ namespace PSHelpEdit.Models
     /// </summary>
     public class CommandRootItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private string _commandName;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -36,7 +36,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public string CommandName
         {
             get { return _commandName; }
@@ -44,7 +44,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
         #region MyRegion
@@ -83,7 +83,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private helpers ♦
+        #region Private helpers
         private void GetCommandNameValue()
         {
             IHelpItem child = GetChildWithName(Defines.command);

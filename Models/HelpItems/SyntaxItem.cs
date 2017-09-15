@@ -14,12 +14,12 @@ namespace PSHelpEdit.Models
     [XmlTagType("syntaxItem", HelpItemTypes.syntaxItem)]
     public class SyntaxItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private string _syntaxName;
         private List<ParameterItem> _parameters;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="SyntaxItem"/> class.
         /// </summary>
@@ -42,7 +42,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         /// <summary>
         /// Gets or sets the name of the syntax.
         /// </summary>
@@ -71,7 +71,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -83,14 +83,14 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Protected Methods. ♦
+        #region Protected Methods.
         protected void MapProperties()
         {
             MapSyntaxNameProperty();
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         private void MapSyntaxNameProperty()
         {
             HelpItemBase nameItemBase = GetChildWithName(HelpItemTypes.name.ToString());
@@ -115,7 +115,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
       

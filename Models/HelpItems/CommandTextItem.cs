@@ -15,10 +15,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("commandText", HelpItemTypes.commandText)]
     public class CommandTextItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -35,13 +35,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden Methods. ♦
+        #region Base overridden Methods.
         public override void Save(XElement e)
         {
             base.Save(e);

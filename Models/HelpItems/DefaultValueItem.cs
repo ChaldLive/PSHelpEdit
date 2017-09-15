@@ -13,7 +13,7 @@ namespace PSHelpEdit.Models
     public class DefaultValueItem : HelpItemBase
     {
         //
-        #region ♦  Constructors ♦
+        #region  Constructors
         public DefaultValueItem()
         {
 
@@ -30,10 +30,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         #endregion
         //
-        #region ♦ Base overridden methods ♦
+        #region Base overridden methods
         public override void Load(XElement e)
         {
             base.Load(e);

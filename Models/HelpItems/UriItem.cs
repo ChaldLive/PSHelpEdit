@@ -15,10 +15,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("uri", HelpItemTypes.uri)]
     public class UriItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -35,13 +35,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden Methods. ♦
+        #region Base overridden Methods.
         public override void Load(XElement e)
         {
             base.Load(e);

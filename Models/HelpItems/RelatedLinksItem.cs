@@ -11,10 +11,10 @@ namespace PSHelpEdit.Models
     [XmlTagType("relatedLinks", HelpItemTypes.relatedLinks)]
     public class RelatedLinksItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -46,13 +46,13 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden. ♦
+        #region Base overridden.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -63,10 +63,10 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
     }
 }

@@ -17,12 +17,12 @@ namespace PSHelpEdit.Models
     [XmlTagType("parameterValue", HelpItemTypes.parameterValue)]
     public class ParameterValueItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private bool _required;
         private bool _variableLength;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -58,7 +58,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public bool Required
         {
             get { return _required; }
@@ -83,10 +83,10 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden. ♦
+        #region Base overridden.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -100,7 +100,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private Methods. ♦
+        #region Private Methods.
         private void RemapAttributes()
         {
             //IEnumerable<HelpItemAttribute> attributes = GetChildrenWithName<HelpItemAttribute>("")
@@ -108,7 +108,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Abstract virtual methods. ♦
+        #region Abstract virtual methods.
         #endregion
         //
         #region MyRegion

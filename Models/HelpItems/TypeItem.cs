@@ -15,12 +15,12 @@ namespace PSHelpEdit.Models
     [XmlTagType("type", HelpItemTypes.type)]
     public class TypeItem : HelpItemBase
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private NameItem _nameItem;
         private UriItem _uriItem;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>
@@ -43,7 +43,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Public properties. ♦
+        #region Public properties.
         public NameItem NameItem
         {
             get { return _nameItem; }
@@ -67,10 +67,10 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public Methods. ♦
+        #region Public Methods.
         #endregion
         //
-        #region ♦ Base overridden Methods. ♦
+        #region Base overridden Methods.
         public override void Load(XElement e)
         {
             base.Load(e);
@@ -82,7 +82,7 @@ namespace PSHelpEdit.Models
         }
         #endregion
         //
-        #region ♦ Private helper methods. ♦
+        #region Private helper methods.
         private void Remap_Properties()
         {
             RempaProperty_Name();

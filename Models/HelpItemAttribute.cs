@@ -9,12 +9,12 @@ namespace PSHelpEdit.Models
 {
     public class HelpItemAttribute : IHelpItemAttribute
     {
-        #region ♦ Private fields ♦
+        #region Private fields
         private string _name;
         private object _value;
         #endregion
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         /// <summary>
         /// 
         /// </summary>

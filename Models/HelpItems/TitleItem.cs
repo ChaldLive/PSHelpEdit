@@ -13,7 +13,7 @@ namespace PSHelpEdit.Models
     public class TitleItem : HelpItemBase
     {
         //
-        #region ♦ Constructors ♦
+        #region Constructors
         public TitleItem(string name)
             :base(name)
         {
@@ -27,13 +27,13 @@ namespace PSHelpEdit.Models
 
         #endregion
         //
-        #region ♦ Public properties ♦
+        #region Public properties
         #endregion
         //
-        #region ♦ Public methods ♦
+        #region Public methods
         #endregion
         //
-        #region ♦ Base overridden ♦
+        #region Base overridden
         public override void Load(XElement e)
         {
             base.Load(e);
